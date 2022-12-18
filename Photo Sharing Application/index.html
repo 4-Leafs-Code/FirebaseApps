@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Photo Sharing</title>	
+	<link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+	<div id="container">
+
+		<div id="progress-container">
+			<progress max="100"></progress>
+		</div>
+
+		<div id="images"></div>
+		
+		<div class="buttons-grid">
+			<div>
+				<input type="file" id="upload-button">
+			</div>
+			<div>
+				<button id="clear" class="blue-button">Remove all photos</button>
+			</div>
+		</div>
+		
+
+	</div>
+	<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+	<script src="./index.js"></script>
+</body>
+</html>

@@ -1,12 +1,7 @@
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAq2EH6IdO1E-uZ1P3dDs4FN1D9--JUJP4",
-  authDomain: "chatapp4leafscode.firebaseapp.com",
-  projectId: "chatapp4leafscode",
-  storageBucket: "chatapp4leafscode.appspot.com",
-  messagingSenderId: "144417126300",
-  appId: "1:144417126300:web:31de7963586bff9b60ba59"
+	
 };
 
 firebase.initializeApp(firebaseConfig)

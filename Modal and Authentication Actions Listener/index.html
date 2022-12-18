@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>My App with Auth</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do">
+	<link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+    <!-- Header -->
+	<div id="header">
+		<div>
+			<img src="/udata/kvy8DD1x1RW/authentication-boilerplate-logo.jpg" alt="logo" id="logo">
+        </div>
+        <div></div>
+		<div class="hide-when-signed-in header-buttons-grid">
+            <div>
+                <button id="sign-in-link-header" class="auth gray-button" auth="show-sign-in-form">Sign In</button>
+            </div>
+            <div>
+                <button id="create-user-link-header" class="auth purple-button" auth="show-create-user-form">Create User</button>
+            </div>
+        </div>
+        
+		<div class="hide-when-signed-out hide" id="user-details-header">
+			<h1 id="display-name-header"></h1>
+		</div>
+	</div>
+
+	<!-- Hero Banner -->
+    <div class="hide-when-signed-in">
+        <img src="/udata/GDpzwxlVjl2/hero-banner-desktop.jpg" alt="hero banner" id="hero-banner-desktop">
+        <img src="/udata/nWG9YbPorB4/hero-banner-tablet.jpg" alt="hero banner" id="hero-banner-tablet">
+        <img src="/udata/4Pb8eYMaPvn/hero-banner-phone.jpg" alt="hero banner" id="hero-banner-phone">
+	</div>
+
+	<!-- Dashboard -->
+	<div id="dashboard" class="hide-when-signed-out">
+
+		<form id="to-do-list-form">
+			<h1>New task</h1>
+			<input type="text" id="item" placeholder="Task" , required autocomplete="off">
+			<button type="submit">Add</button>
+		</form>
+
+		<div>
+			<h1>To do list</h1>
+			<div id="to-do-list-items"></div>
+		</div>
+
+		<div>
+			<div id="account">
+				<h1>Account</h1>
+				<button class="auth" auth="sign-out">sign out</button>
+			</div>
+		</div>
+
+	</div>
+    
+	<!-- Footer -->
+	<div id="footer">
+		<div>
+			<p>
+				<h3>About</h3>
+				<i>Expertly Authenticate Users</i>
+			</p>
+		</div>
+		<div>
+			<p>
+				<h3>Firebase</h3>
+				<i>Authentication, Hosting, Database, Storage</i>
+			</p>
+		</div>
+		<div>
+			<p>
+				<h3>Language</h3>
+				<i>JavaScript (JS) ECMAScript (ES)</i>
+			</p>
+		</div>
+	</div>
+	<!-- Footer -->
+
+	<!-- Modal -->
+	<div id="modal">
+		<div id="modal-content">
+			<button id="close">&times</button>
+			<!-- Authentication -->
+			<div id="authentication">
+				<!-- Create user form -->
+				<form id="create-user-form">
+					<div id="create-user-inputs">
+						<input type="text" id="create-user-display-name" placeholder="Display Name" required
+							autocomplete="off">
+						<input type="email" id="create-user-email" placeholder="Email" required autocomplete="off">
+						<input type="password" id="create-user-password" placeholder="Password" required
+							autocomplete="off">
+					</div>
+					<button id="create-user-button" class="purple-button" type="submit">Create User</button>
+				</form>
+
+				<!-- Sign in form -->
+				<form id="sign-in-form">
+					<div id="sign-in-inputs">
+						<input type="email" id="sign-in-email" placeholder="Email" required autocomplete="off">
+						<input type="password" id="sign-in-password" placeholder="Password" required autocomplete="off">
+					</div>
+
+					<div id="forgot-password-link" class="auth" auth="show-forgot-password-form">Forgot?</div>
+					<button id="sign-in-button" class="purple-button" type="submit">Sign In</button>
+				</form>
+
+				<!-- Forgot password form form -->
+				<form id="forgot-password-form">
+					<div id="forgot-password-inputs">
+						<input type="email" id="forgot-password-email" placeholder="Email" required autocomplete="off">
+					</div>
+					<button id="forgot-password-button" type="submit">Send Recovery Email</button>
+				</form>
+
+				<!-- Success and error messages -->
+				<div id="message"></div>
+
+				<!-- Loading visual cue -->
+				<div id="loading-outer-container">
+					<div id="loading-inner-container">
+						<div id="loadspin">
+							<div id="circle1"></div>
+							<div id="circle2"></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Have or need account dialog -->
+				<div id="have-or-need-account-dialog">
+					<p id="create-user-dialog">
+						Don't have an account?
+						<span id="create-user-link" class="auth" auth="show-create-user-form">
+							Create User
+						</span>
+					</p>
+					<p id="sign-in-dialog">
+						Already have an account?
+						<span id="sign-in-link" class="auth" auth="show-sign-in-form">
+							Sign In
+						</span>
+					</p>
+				</div>
+			</div>
+		</div>
+    </div>
+
+	
+		
+
+	
+	<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+	<script src="./index.js"></script>
+
+</body>
+</html>
