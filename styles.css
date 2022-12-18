@@ -1,0 +1,95 @@
+body{
+	font-family: sans-serif;
+	color: #666666;
+}
+
+#container{
+	max-width: 400px;
+	margin: auto;
+}
+
+#user-options{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+	margin: 40px 0px 15px 0px;
+}
+
+#change-name{
+	text-align: right;
+	color: #0fabbc;
+	font-size: 10px;
+	cursor: pointer;
+}
+
+input{
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px solid #cccccc;
+	width: 100%;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+}
+
+input:focus{
+	outline: none;
+}
+
+.name{
+	font-size: 11px;
+	font-weight: 700;
+}
+
+#name{
+	font-style: italic;
+	font-weight: 600;
+}
+
+#messages > div {
+	border-radius: 10px;
+	background-color: #efefef;
+	margin: 10px 0px 10px 0px;
+	padding: 10px;
+}
+
+#messages {
+	margin: 15px 0px 10px 0px;
+}
+
+button{
+	color: #ffffff;
+	width: 100%;
+	text-align: center;
+	border: 0px;
+	border-radius: 10px;
+	padding: 10px 0px 10px 0px;
+	font-size: 16px;
+	outline: 0;
+	cursor: pointer;
+}
+
+.orange-button{
+	background-color: #ffbd69;
+	box-shadow: 0 4px #d19c57;
+}
+
+.orange-button:hover{
+	box-shadow: 0 2px #d19c57;
+}
+
+.orange-button:active{
+	box-shadow: 0 0px #d19c57;
+}
+
+.purple-button{
+    background-color: #aa96da ;
+	box-shadow: 0 4px #7765a0;
+}
+
+.purple-button:hover{
+    box-shadow: 0 2px #7765a0;
+}
+
+.purple-button:active{
+    box-shadow: 0 0 #7765a0;
+}

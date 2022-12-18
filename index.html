@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatApp</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- authenticate user -->
+    <div id="container">
+      <div id="user-options">
+        <div>Hi, <span id="name"></span></div>
+        <div id="change-name">change name</div>
+      </div>
+    </div>
+
+    <!-- message injection point -->
+    <div id="messages"></div>
+    <!-- letter form -->
+    <form id="message-form">
+      <input type="text" id="message-input" placeholder="message" required />
+      <button class="orange-button">send</button>
+    </form>
+    <button id="clear" class="purple-button">Clear All Messages</button>
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
